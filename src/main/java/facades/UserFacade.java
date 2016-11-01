@@ -18,12 +18,12 @@ public class UserFacade implements IUserFacade {
     /*When implementing your own database for this seed, you should NOT touch any of the classes in the security folder
     Make sure your new facade implements IUserFacade and keeps the name UserFacade, and that your Entity User class implements 
     IUser interface, then security should work "out of the box" with users and roles stored in your database */
-    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("0PUSeed");
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("0PUseed");
     private EntityManager em;
     private String validatePassword;
 
     public UserFacade() {
-        Persistence.generateSchema("0PUSeed", null);
+        Persistence.generateSchema("0PUseed", null);
         //Test Users
         User user = new User("user", "test");
         user.addRole("User");
